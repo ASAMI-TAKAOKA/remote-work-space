@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get  '/help',    to: 'static_pages#help'
   get  '/about',   to: 'static_pages#about'
+  # ユーザー情報を表示するURL（/users/1）を追加するため& ユーザーのURLを生成するための多数の名前付きルートを利用できるようにするため
+  resources :users, only: [:show]
+
 end
