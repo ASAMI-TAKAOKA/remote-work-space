@@ -1,0 +1,10 @@
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @posts.each do |post| %>
+    <div class="content_post" >
+    <p><%= post.text %></p>
+    <p><%= image_tag post.image.variant(resize: '500x500'), class: 'post-image' if post.image.attached?%></p>
+      <span class="name"><%= post.name %></span>
+    </div>
+  <% end %>
+</div>

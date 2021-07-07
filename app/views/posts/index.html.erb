@@ -1,0 +1,14 @@
+<div class="contents row">
+  <% @posts.each do |post| %>
+    <div class="content_post" >
+      <p><%= post.text %></p>
+       <p><%= image_tag post.image.variant(resize: '500x500'), class: 'post-image' if post.image.attached?%></p>
+      <span class="name">
+        <%= post.nickname %>
+      </span>
+      <%= link_to '詳細', post_path(post.id), method: :get %>
+      <%= link_to '編集', edit_post_path(post.id), method: :get %>
+      <%= link_to '削除', "/posts/#{post.id}", method: :delete %>
+    </div>
+  <% end %>
+</div>
