@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'likes/create'
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     passwords: 'users/passwords'
@@ -12,5 +13,11 @@ Rails.application.routes.draw do
   # ユーザー情報を表示するURL（/users/1）を追加するため& ユーザーのURLを生成するための多数の名前付きルートを利用できるようにするため
   resources :users, only: :show
   get 'posts/index'
-  resources :posts
+  resources :posts do
+    resources :comments, only: :create
+    resources :likes, only: [:create, :destroy]
+    collection do
+      get 'search'
+    end
+  end
 end
