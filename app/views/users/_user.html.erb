@@ -1,5 +1,6 @@
 <%= gravatar_for user, size: 50 %>
-<%= link_to user.nickname, user %>
+<%= user.nickname %>
+<h6> 自己紹介 </h6>
 <section class="stats">
 <%= render 'shared/stats' %>
 </section>

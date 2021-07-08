@@ -5,6 +5,7 @@
         <%= link_to gravatar_for(current_user, size: 50), current_user %>
         <h1><%= current_user.nickname %>さんのマイページ</h1>
         <span><%= pluralize(current_user.posts.count, "post") %></span>
+        <%= link_to "Settings", edit_user_registration_path(current_user) %>
       </section>
       <section class="posts_form">
         <%= render 'posts/form' %>

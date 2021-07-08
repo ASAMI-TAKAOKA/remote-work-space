@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  
 
   def index
     @users = User.all
@@ -13,6 +14,7 @@ class UsersController < ApplicationController
       @feed_items = current_user.feed
     end
   end
+
 
   def following
     @title = "Following"
@@ -33,12 +35,7 @@ class UsersController < ApplicationController
                                  :password_confirmation)
   end
 
-  # beforeフィルター
-
-  # 正しいユーザーかどうかを確認
-  def correct_user
-    @user = User.find(params[:id])
-    redirect_to(root_url) unless current_user?(@user)
+  def set_user
+    @user = User.find([:id])
   end
-  
 end
