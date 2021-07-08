@@ -1,5 +1,4 @@
 <%= form_with(model: post, local: true) do |form|  %>
-      <%= form.text_field :nickname, placeholder: "ニックネーム", class: 'container'%>
       <%= form.text_area :text, placeholder: "text", rows: "10", class: 'container'%>
       <%= form.label "画像をアップロード" %><br><%= form.file_field :image %>
       <%= form.submit "つぶやく", class: 'container'%>
