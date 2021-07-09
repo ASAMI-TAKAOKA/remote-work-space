@@ -11,7 +11,13 @@ Rails.application.routes.draw do
   get  '/help',    to: 'static_pages#help'
   get  '/about',   to: 'static_pages#about'
   # ユーザーのURLを生成するための多数の名前付きルートを利用できるようにするため
-  resources :users, only: :show
+  
+  resources :users, only:[:index, :show, :edit, :update] do
+    member do
+      get :follows, :followers
+    end
+    resource :relationships, only: [:create, :destroy]
+  end
 
   get 'posts/index'
   resources :posts do
