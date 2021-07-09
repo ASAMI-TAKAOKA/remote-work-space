@@ -3,12 +3,12 @@
        <p><%= image_tag post.image.variant(resize: '500x500'), class: 'post-image' if post.image.attached?%></p>
       <span class="name">
            <a href="/users/<%= post.user.id %>">
-          <span>投稿者名：</span><%= post.user.nickname %>
+          <span >投稿者名：</span><%= post.user.nickname %>
         </a>
       </span>
-      <%= link_to 'コメント', post_path(post.id), method: :get %>
+      <%= link_to '投稿詳細', post_path(post.id), method: :get, class: "btn btn-info mr-3" %>
       <% if user_signed_in? && current_user.id == post.user_id %>
-      <%= link_to '編集', edit_post_path(post.id), method: :get %>
-      <%= link_to '削除', "/posts/#{post.id}", method: :delete %>
+      <%= link_to '編集', edit_post_path(post.id), method: :get, class: "btn btn-info mr-3" %>
+      <%= link_to '削除', "/posts/#{post.id}", method: :delete, class: "btn btn-info mr-3" %>
       <% end %>
     </div>

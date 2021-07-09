@@ -10,6 +10,10 @@ class UsersController < ApplicationController
     @users = user.follower_user.page(params[:page]).per(3).reverse_order
   end
 
+  def index
+    @users = User.page(params[:page]).per(3).reverse_order
+  end
+  
   def show
     @user = User.find(params[:id])
     @nickname = @user.nickname
