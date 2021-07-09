@@ -6,6 +6,8 @@
           <span >投稿者名：</span><%= post.user.nickname %>
         </a>
       </span>
+      <br>
+      <br>
       <%= link_to '投稿詳細', post_path(post.id), method: :get, class: "btn btn-info mr-3" %>
       <% if user_signed_in? && current_user.id == post.user_id %>
       <%= link_to '編集', edit_post_path(post.id), method: :get, class: "btn btn-info mr-3" %>

@@ -1,5 +1,5 @@
     <%= form_with(model: @post, local: true) do |form|  %>
       <%= form.text_area :text, placeholder: "text", rows: "10", class: 'container'%>
       <%= form.file_field :image %>
-      <%= form.submit "つぶやく", class: 'container'%>
+      <%= form.submit "投稿する", class: 'container', class: "btn btn-info mr-3"%>
     <% end %>

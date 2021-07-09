@@ -1,27 +1,23 @@
-<header class="navbar navbar-expand-md bg-dark navbar-dark bg-dark">
-      <div class="container">
-        <%= link_to "TELESPO", '/', id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <% if user_signed_in? %>
+<header>
+<nav>
+    <div class="nav-wrapper red lighten-5">
+      <a href='/' class="brand-logo left">　TELESPO</a>
+      <ul class="right hide-on-med-and-down">
+        <% if user_signed_in? %>
               <%# <li><%= link_to "ユーザー一覧", users_path %></li>
-              <li><%= link_to "マイページ", user_path(current_user.id), class: "post" %></li>
-              <li><%= link_to "ユーザー一覧ページ", users_path, class: "post" %></li>
-              <li><%= link_to "投稿一覧ページ", posts_index_path, class: "post" %></li>
-              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: "post"  %></li>
-              <li><%= link_to "投稿する", new_post_path, class: "post" %></li>
+              <li><%= link_to "マイページ", user_path(current_user.id), class: "btn btn-info mr-3" %></li>
+              <li><%= link_to "ユーザー一覧ページ", users_path, class: "btn btn-info mr-3" %></li>
+              <li><%= link_to "投稿一覧ページ", posts_index_path, class: "btn btn-info mr-3" %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-info mr-3"  %></li>
+              <li><%= link_to "投稿する", new_post_path, class: "btn btn-info mr-3" %></li>
             <% else %>
               <li><%= link_to "ゲストログイン", '/users/guest_sign_in', method: :post %></li>
               <li><%= link_to "ログイン", new_user_session_path, class: "post" %></li>
               <li><%= link_to "新規登録", new_user_registration_path, class: "post" %></li>
             <% end %>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    
-       
-
+      </ul>
+    </div>
+  </nav>
+</header>
 
         

@@ -8,17 +8,18 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import '@fortawesome/fontawesome-free/js/all';
-import "../stylesheets/application.scss";
+import '../stylesheets/application'
+import 'materialize-css/dist/js/materialize'
 
 
+require("@fortawesome/fontawesome-free");
 
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-require("bootstrap");
-require("@fortawesome/fontawesome-free");
+
 
 const images = require.context('../images', true)
 const imagePath = (name) => images(name, true)

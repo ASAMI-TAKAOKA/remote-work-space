@@ -8,8 +8,8 @@
       </a>
       <% if user_signed_in? && current_user.id == @post.user_id %>
       </span>
-      <%= link_to '編集', edit_post_path(@post.id), method: :get %>
-      <%= link_to '削除', "/posts/#{@post.id}", method: :delete %>
+      <%= link_to '編集', edit_post_path(@post.id), method: :get, class: "btn btn-info mr-3" %>
+      <%= link_to '削除', "/posts/#{@post.id}", method: :delete, class: "btn btn-info mr-3" %>
        <% end %>
         <% if Like.find_by(user_id: current_user.id,post_id: @post.id)%>
        <%= link_to("/posts/#{@post.id}/likes/#{@like.id}",{method: "delete"})do %>
@@ -27,7 +27,7 @@
     <% if user_signed_in? %>
       <%= form_with(model: [@post, @comment], local: true) do |form| %>
         <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "コメント" %>
+        <%= form.submit "コメント", class: "btn btn-info mr-3" %>
       <% end %>
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
