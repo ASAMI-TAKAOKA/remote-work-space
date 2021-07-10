@@ -14,16 +14,27 @@
     </div>
   </div>
 
-<br>
-<br>
-<br>
-<br>
+<div class="container">
+  <div class="row justify-content-center">
+    <h1 class="font-weight-normal mt-5 mb-5">おすすめスポット投稿一覧</h1>
+  </div>
+      <div class="contents row">
+          <% @posts.each do |post| %>
+            <table class="table-light table-bordered text-dark">
+              <tbody>
+                <tr>
+                  <td>
+                  <div class="row no-gutters">
+                    <%= render partial: "post", locals: { post: post } %>
+                  </div>
+                  </td>
+                <tr>
+              </tbody>
+            </table>
+            <% end %>
+      </div>
+</div>
+ <%= paginate @posts %>
 
-
-
-<div class="contents row">
-  <% @posts.each do |post| %>
-<%= render partial: "post", locals: { post: post } %>
-<% end %>
 
 

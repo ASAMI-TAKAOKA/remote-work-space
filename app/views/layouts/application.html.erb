@@ -9,7 +9,9 @@
     <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
-      <%= render 'layouts/footer' %>
+        <div class="footerwrapper">
+          <%= render 'layouts/footer' %>
+        </div>
     </div>
   </body>
 </html>
