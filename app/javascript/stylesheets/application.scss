@@ -3,13 +3,16 @@
 
 /* サイト全体のフォント指定 */
 body {
-  font-family: "メイリオ" ;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: normal;
   color: #FAFAFA;
   height: 500px; /* 空の要素なので高さの定義が必要 */
   background-image: url("../images/haikei2.jpg");
   border-radius: 30px;
 
 }
+
+
 
 /* container-fluid */
 .container-fluid {
@@ -27,7 +30,7 @@ table {
   border: 1px solid #aaa;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 6px;
+  border-radius: 6x;
   overflow: hidden;
 }
 table thead th,

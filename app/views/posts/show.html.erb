@@ -1,30 +1,40 @@
-<div class="contents row">
-    <div class="content_post" >
-      <p><%= @post.text %></p>
-       <p><%= image_tag @post.image.variant(resize: '500x500'), class: 'post-image' if @post.image.attached?%></p>
-      <span class="name">
-        <a href="/users/<%= @post.user.id %>">
-        <span>投稿者名：</span><%= @post.user.nickname %>
-      </a>
-      <% if user_signed_in? && current_user.id == @post.user_id %>
-      </span>
-      <%= link_to '編集', edit_post_path(@post.id), method: :get, class: "btn btn-info mr-3" %>
-      <%= link_to '削除', "/posts/#{@post.id}", method: :delete, class: "btn btn-info mr-3" %>
-       <% end %>
-        <% if Like.find_by(user_id: current_user.id,post_id: @post.id)%>
-       <%= link_to("/posts/#{@post.id}/likes/#{@like.id}",{method: "delete"})do %>
-       <span class="fa fa-heart like-btn-unlike"></span>
-       <% end %>
-      <% else %>
-      <%= link_to("/posts/#{@post.id}/likes",{method: "post"})do %>
-      <span class="fa fa-heart like-btn"></span>
-      <% end %>
-       <% end %>
-       <%= @likes_count %>
-    </div>
+<h1 class="font-weight-normal mt-5 mb-5">投稿詳細ページ</h1>
+<table class="table-light table-bordered text-dark">
+  <tbody>
+    <tr>
+      <td>
+        <div class="contents row">
+            <div class="content_post" >
+              <p><%= @post.text %></p>
+                      <p><%= image_tag @post.image.variant(resize: '500x500'), class: 'post-image' if @post.image.attached?%></p>
+                      <span class="name">
+                        <a href="/users/<%= @post.user.id %>">
+                        <span>投稿者名：</span><%= @post.user.nickname %>
+                      </a>
+                        <% if user_signed_in? && current_user.id == @post.user_id %>
+                        </span>
+                        <%= link_to '編集', edit_post_path(@post.id), method: :get, class: "btn btn-info mr-3" %>
+                        <%= link_to '削除', "/posts/#{@post.id}", method: :delete, class: "btn btn-info mr-3" %>
+                        <% end %>
+                            <% if Like.find_by(user_id: current_user.id,post_id: @post.id)%>
+                            <%= link_to("/posts/#{@post.id}/likes/#{@like.id}",{method: "delete"})do %>
+                            <span class="fa fa-heart like-btn-unlike"></span>
+                            <% end %>
+                      <% else %>
+                      <%= link_to("/posts/#{@post.id}/likes",{method: "post"})do %>
+                      <span class="fa fa-heart like-btn"></span>
+                      <% end %>
+                      <% end %>
+                      <%= @likes_count %>
+          </div>
+      </td>
+    </tr>     
+  </tbody>
+</table>
 
     <div class="container">
     <% if user_signed_in? %>
+    <h2 class="font-weight-normal mt-5 mb-5">コメント投稿</h2>
       <%= form_with(model: [@post, @comment], local: true) do |form| %>
         <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
         <%= form.submit "コメント", class: "btn btn-info mr-3" %>
@@ -33,13 +43,22 @@
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
      <div class="comments">
-      <h4>＜コメント一覧＞</h4>
+      <h2>コメント一覧</h2>
       <% @comments.each do |comment| %>
-        <p>
-          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-          <%= comment.text %>
-        </p>
+        <table class="table-light table-bordered text-dark">
+          <tbody>
+            <tr>
+              <td>
+                  <p>
+                    <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+                    <%= comment.text %>
+                  </p>
+              </td>
+            </tr>     
+          </tbody>
+        </table>
       <% end %>
     </div>
   </div>
 </div>
+
