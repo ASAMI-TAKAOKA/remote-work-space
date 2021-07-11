@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-sm">
-    <p><%= post.text %></p>
+    <p>スポット名称：<%= post.body %></p>
+    <p>住所：<%= post.address %></p>
+    <p>私のイチオシポイント：<%= post.text %></p>
     <p><%= image_tag post.image.variant(resize: '500x500'), class: 'post-image' if post.image.attached?%></p>
     <span class="name">
         <a href="/users/<%= post.user.id %>">

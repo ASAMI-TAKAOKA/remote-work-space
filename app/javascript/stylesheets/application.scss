@@ -3,8 +3,7 @@
 
 /* サイト全体のフォント指定 */
 body {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-weight: normal;
+  font-family: "Arial Black" ;
   color: #FAFAFA;
   height: 500px; /* 空の要素なので高さの定義が必要 */
   background-image: url("../images/haikei2.jpg");
@@ -12,7 +11,10 @@ body {
 
 }
 
-
+/* h1見出しのフォント指定 */
+h1 {
+  font-family: "メイリオ" ;
+  }
 
 /* container-fluid */
 .container-fluid {

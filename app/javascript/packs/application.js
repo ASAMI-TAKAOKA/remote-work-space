@@ -13,6 +13,7 @@ import '../stylesheets/application'
 
 
 require("@fortawesome/fontawesome-free");
+require("turbolinks").start()
 
 
 Rails.start()
