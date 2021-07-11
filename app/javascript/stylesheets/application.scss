@@ -8,19 +8,27 @@ body {
   height: 500px; /* 空の要素なので高さの定義が必要 */
   background-image: url("../images/haikei2.jpg");
   border-radius: 30px;
-
+  width: 100%;
+  padding: 0;
+  line-height: 200%
 }
+
+
 
 /* h1見出しのフォント指定 */
 h1 {
-  font-family: "メイリオ" ;
+  font-family: "Arial Black" ;
+  }
+
+/* h6のフォント指定 */
+h6 {
+  line-height: 200%
   }
 
 /* container-fluid */
 .container-fluid {
   width: 100%;
   padding: 80px 30px 30px 80px;
-
   border-radius: 20px;
 }
 
@@ -29,7 +37,7 @@ h1 {
 table {
   width: 100%;
   table-layout: fixed;
-  border: 1px solid #aaa;
+  
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 6x;
@@ -39,7 +47,7 @@ table thead th,
 table tbody th,
 table tbody td {
   padding: .6em 3em;
-  border-bottom: 1px solid #aaa;
+  
 }
 table thead th {
   background-color: #ddd;
@@ -48,9 +56,7 @@ table tbody th {
   background-color: #eee;
 }
 table thead th + th,
-table tbody td {
-  border-left: 1px solid #aaa;
-}
+
 table tbody tr:last-child th,
 table tbody tr:last-child td {
   border-bottom: none;
@@ -58,20 +64,22 @@ table tbody tr:last-child td {
 
 /* footer */
 .footerwrapper{
-  min-height: 100vh;
   position: relative;/*←相対位置*/
   padding-bottom: 80px;/*←footerの高さ*/
   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+  width: 100%;
 }
+
 
 footer{
-  width: 100%;
-  background-color: #e4e9eb;
-  color: #fff;
-  text-align: left;
-  padding: 30px 0;
-
+  color: rgb(56, 57, 58);
   position: absolute;/*←絶対位置*/
   bottom: 0; /*下に固定*/
+  width: 100%;
 }
 
+table, tr, td {
+  border: none;
+  font-size: 19px;
+  line-height: 200%;
+}

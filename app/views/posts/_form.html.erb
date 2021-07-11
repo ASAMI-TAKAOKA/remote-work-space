@@ -1,6 +1,6 @@
-<input id="address" type="textbox" value="住所を入力">
+<i class="fas fa-search fa-2x"></i><input id="address" type="textbox" value="住所を探す">
 <input type="button" value="検索" onclick="codeAddress()">
-<p>住所を入力し検索ボタンを押すと、緯度・軽度が自動で入力されます。<p>
+<p>住所を入力して検索すると、自動で緯度・軽度が入力されます。<p>
 <p>マーカーをドラック＆ドロップで位置の調整ができます。<p>
 <div id='map'></div>
 
@@ -70,17 +70,17 @@ function codeAddress(){
 <br>
 <br>
 <br>
-    <%= form_with(model: @post, local: true) do |form|  %>
-      <%= form.text_field :body, placeholder: "スポット名称", rows: "1", class: 'container' %>
-      <%= form.text_field :address, placeholder: "住所", rows: "1", class: 'container' %>
-      <%= form.text_area :text, placeholder: "私のイチオシポイント", rows: "5", class: 'container'%>
-      <%= form.file_field :image %>
-      <%= form.label :lat,"緯度" %>
-      <%= form.text_field :lat,:value =>"緯度", id: :lat %>
-      <%= form.label :lng,"経度" %>
-      <%= form.text_field :lng,:value =>"経度", id: :lng %>
-      <%= form.submit "投稿する", class: 'container', class: "btn btn-info mr-3"%>
-    <% end %>
+<%= form_with(model: @post, local: true) do |form|  %>
+<%= form.label :lat,"緯度" %>
+<%= form.text_field :lat,:value =>"緯度", id: :lat %>
+<%= form.label :lng,"経度" %>
+<%= form.text_field :lng,:value =>"経度", id: :lng %>
+<%= form.text_field :body, placeholder: "スポット名称", rows: "1", class: 'container' %>
+<%= form.text_field :address, placeholder: "住所", rows: "1", class: 'container' %>
+<%= form.text_area :text, placeholder: "私のイチオシポイント", rows: "5", class: 'container'%>
+<%= form.file_field :image %>
+<%= form.submit "投稿する", class: 'container', class: "search-btn"%>
+<% end %>
 
 
 
