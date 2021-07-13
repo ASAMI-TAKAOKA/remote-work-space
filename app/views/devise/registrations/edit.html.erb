@@ -9,6 +9,16 @@
     <%= f.text_field :nickname, autofocus: true %>
   </div>
 
+  <!--アカウント編集時に画像を追加できるようにフォームを追加-->
+  <%= f.label :image %><br />
+  <%= f.file_field :image %>
+
+  <!--アカウント編集時にプロフィールを入力できるようにフォームを追加-->
+<div class="field">
+  <%= f.label :profile %><br />
+  <%= f.text_area :profile, autofocus: true %>
+</div>
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -32,10 +42,7 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
+  
 
   <div class="actions">
     <%= f.submit "Update" %>

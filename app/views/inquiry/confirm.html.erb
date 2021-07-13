@@ -1,0 +1,33 @@
+<div class="page-header">
+<br>
+  <h1>お問い合わせ</h1>
+<br>
+</div>
+<%= form_for @inquiry, :url => inquiry_thanks_path do |f| %>
+  <table class="table">
+    <tr>      
+        <th>【お名前】<%= f.hidden_field :name %></th>
+        <th><%= @inquiry.name %></th>
+    </tr>
+    <tr>
+        <th>【メールアドレス】<%= f.hidden_field :email %></th>
+        <th><%= @inquiry.email %></th>
+    </tr>
+    <tr>
+        <th>【お問い合わせ内容】<%= f.hidden_field :message %></th>
+        <th><%= simple_format(@inquiry.message)  %></th>
+    </tr>
+  </table>
+  <%= f.submit '送信', :class => 'btn btn-primary' %>
+<% end %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

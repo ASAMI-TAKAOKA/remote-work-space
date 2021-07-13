@@ -62,6 +62,8 @@ table tbody tr:last-child td {
   border-bottom: none;
 }
 
+
+
 /* footer */
 .footerwrapper{
   position: relative;/*←相対位置*/
@@ -82,4 +84,71 @@ table, tr, td {
   border: none;
   font-size: 19px;
   line-height: 200%;
+}
+
+
+/* この記事を書いた人 */
+
+/* カード全体 */
+.writer-profile-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 2px dashed #eee;
+}
+/* カードの右・左共通 */
+.wp-left, .wp-right {
+  padding: 20px 20px;
+}
+/* カードの左側 */
+.wp-left {
+  width: 45%;
+  border-right: 2px dashed #eee;
+  text-align: center;
+}
+/* カードの右側 */
+.wp-right {
+  width: 55%;
+}
+
+/* 左側 */
+
+/* 画像 */
+.wp-img {
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+/* 画像を丸く、枠線をつける */
+.wp-img img {
+  border-radius: 50%;
+  border: 2px solid #eee;
+}
+/* 名前 */
+.wp-name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #6C9FCE;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* 右側 */
+
+/* 文章を左揃え・中央寄せに */
+.wp-content {
+  text-align: left;
+  display: block;
+}
+/* 文章 */
+.wp-content p {
+  text-align: left;
+  display: inline-block;
+  color: #7b7b7b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
 }
