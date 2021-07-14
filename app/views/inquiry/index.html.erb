@@ -1,34 +1,61 @@
 <%= form_for @inquiry, :url => inquiry_confirm_path do |form| %>
 
   <div class="page-header">
-  <br>
-  <h1>お問い合わせ</h1>
-  <br>
+    <div class="container">
+      <div class="row">
+       <div class="col-sm">
+        <br>
+        <h1>お問い合わせ</h1>
+        <br>
+      </div>
+   </div>
   </div>
+</div>
 
-  <% if @inquiry.errors.any? %>
-    <div class="alert alert-danger" role="alert">
-      <strong>入力内容にエラーがあります</strong>
-      <ul>
-        <% @inquiry.errors.each do |attr, msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+<div class="container">
+  <div class="row">
+     <div class="col-sm">
+      <% if @inquiry.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+          <strong>入力内容にエラーがあります</strong>
+          <ul>
+            <% @inquiry.errors.each do |attr, msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
+</div>
 
-  <table class="table">
-    <tr>
-      <td><%= form.text_field :name, placeholder: "お名前(必須)", rows: "1", class: 'container' %></td>
-    </tr>
-    <tr>
-      <td><%= form.text_field :email, placeholder: "メールアドレス(必須)", rows: "1", class: 'container' %></td>
-    </tr>
-    <tr>
-      <td><%= form.text_area :message, placeholder: "お問い合わせ内容", rows: "5", class: 'container' %></td>
-    </tr>
-  </table>
-  <%= form.submit '確認', class: 'btn btn-primary' %>
+
+<div class="container">
+  <div class="row">
+     <div class="col-sm">
+      <table class="table">
+        <tr>
+          <td><%= form.text_field :name, placeholder: "お名前(必須)", rows: "1", class: 'container' %></td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :email, placeholder: "メールアドレス(必須)", rows: "1", class: 'container' %></td>
+        </tr>
+        <tr>
+          <td><%= form.text_area :message, placeholder: "お問い合わせ内容", rows: "5", class: 'container' %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+     <div class="col-sm">
+      <%= form.submit '確認', class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
+
 <% end %>
 <br>
 <br>
