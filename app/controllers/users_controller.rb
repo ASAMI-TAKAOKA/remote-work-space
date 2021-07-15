@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :signed_in_user, only: [:index, :edit, :update, :destroy]
 
   def follows
     user = User.find(params[:id])
@@ -21,5 +22,25 @@ class UsersController < ApplicationController
     @following_users = @user.following_user
     @follower_users = @user.follower_user
   end
+
+  private
+
+    def user_params
+      params.require(:user).permit(:nickname, :email, :password,
+                                   :password_confirmation)
+    end
+
+    # beforeフィルター
+
+    # 正しいユーザーかどうかを確認
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless current_user?(@user)
+    end
+
+    # 管理者かどうかを確認
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
+    end
 
 end

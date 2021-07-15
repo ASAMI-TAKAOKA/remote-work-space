@@ -6,6 +6,11 @@ class Post < ApplicationRecord
     self.image.attached?
   end
   belongs_to :user
+  validates :user_id, presence: true
+  validates :text, presence: true, length: { maximum: 300 }
+  validates :body, presence: true
+  validates :address, presence: true
+
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   def self.search(search)

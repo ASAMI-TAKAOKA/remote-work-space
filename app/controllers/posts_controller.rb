@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :signed_in_user, only: [:create, :destroy]
   before_action :set_post, only: [:edit, :show]
   before_action :move_to_index, except: [:index, :show, :search]
 
@@ -11,7 +12,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
+    @post = current_user.posts.build(post_params)
+    if @post.save
+      flash[:success] = "投稿に成功しました!"
+      redirect_to posts_path
+    else
+      flash.now[:danger] = "投稿失敗。※[スポット名称] [住所] [私のイチオシポイント]を入力してください。"
+      render 'posts/new'
+    end
   end
 
   def destroy

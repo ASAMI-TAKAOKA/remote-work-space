@@ -7,9 +7,32 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'layouts/header' %> 
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        <br>
+          <% if flash[:success] %>
+          <div class="flash">
+          <%= flash[:success] %>
+          </div>
+          <% end %>
+    </div>
+  </div>
+</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+        <br>
+        <% if flash[:danger] %>
+        <div class="flash">
+        <%= flash[:danger] %>
+        </div>
+        <% end %>
+    </div>
+  </div>
+</div>
+
     <%= yield %>
     <%= render 'layouts/footer' %>
     
