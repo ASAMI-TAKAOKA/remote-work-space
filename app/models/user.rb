@@ -3,7 +3,13 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
+
+  # バリデーションの設定(空の文字列を保存させない為と一意性制約)
+  validates :nickname,               presence: true
+  validates :encrypted_password,     presence: true, length: { minimum: 6 } # ここが文字数の正規表現
   validates :profile, length: { maximum: 200 } #追記
+
+  # アソシエーション
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
