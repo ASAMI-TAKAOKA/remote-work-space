@@ -12,6 +12,9 @@
                               <p>【住所】<%= @post.address %></p>
                               <p>【私のイチオシポイント】<br><%= @post.text %></p>
                               <p><%= image_tag @post.image.variant(resize: '500x500'), class: 'post-image' if @post.image.attached?%></p>
+                              <!-- 作成、更新日時を表示する -->
+                              <p>【投稿日時】<%= @post.created_at.to_s(:datetime_jp) %></p>
+                              <p>【更新日時】<%= @post.updated_at.to_s(:datetime_jp) %></p>
                               <span class="name">
                                 <a href="/users/<%= @post.user_id %>">
                                 <span>【投稿者名】</span><%= @post.user.nickname %>

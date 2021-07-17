@@ -10,7 +10,7 @@
     <p>【更新日時】<%= post.updated_at.to_s(:datetime_jp) %></p>
     <span class="name">
       <a href="/users/<%= post.user_id %>">
-        <span >【投稿者名】</span><%= post.nickname %>
+        <span >【投稿者名】</span><%= post.user.nickname %>
       </a>
     </span>
     <%= link_to '投稿詳細', post_path(post.id), method: :get, class: "btn btn-info mr-3" %>

@@ -82,8 +82,18 @@
                         <td>
                           <div class="row no-gutters">
                             <div class="content_post" >
-                            <p><%= post.text %></p>
+                            <p>【スポット名称】<%= post.body %></p>
+                            <p>【住所】<%= post.address %></p>
+                            <p>【私のイチオシポイント】<%= post.text %></p>
                             <p><%= image_tag post.image.variant(resize: '500x500'), class: 'post-image' if post.image.attached?%></p>
+                            <!-- 作成、更新日時を表示する -->
+                            <p>【投稿日時】<%= post.created_at.to_s(:datetime_jp) %></p>
+                            <p>【更新日時】<%= post.updated_at.to_s(:datetime_jp) %></p>
+                                <!-- 投稿記事を編集・削除する -->
+                                <% if user_signed_in? && current_user.id == post.user_id %>
+                                <%= link_to '編集', edit_post_path(post.id), method: :get, class: "btn btn-info mr-3" %>
+                                <%= link_to '削除', "/posts/#{post.id}", method: :delete, class: "btn btn-info mr-3" %>
+                                <% end %>
                             </div>
                           </div>
                         </td>
