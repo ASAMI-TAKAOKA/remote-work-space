@@ -13,3 +13,10 @@ development:
 test:
   <<: *default
   database: remote-work-space_test
+
+production:
+  <<: *default
+  host: remote-work-space-db.c5vzectdhrxx.ap-northeast-1.rds.amazonaws.com
+  database: remote-work-space_production
+  username: db_user
+  password: db_password

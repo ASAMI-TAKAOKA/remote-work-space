@@ -24,6 +24,8 @@ services:
     build:
       context: containers/nginx
     volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./remote-work-space.conf:/etc/nginx/conf.d/remote-work-space.conf
       - public-data:/var/www/remote-work-space/public
       - tmp-data:/var/www/remote-work-space/tmp
     ports:
