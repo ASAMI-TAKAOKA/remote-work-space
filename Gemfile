@@ -11,6 +11,7 @@ gem 'mysql2', '~> 0.5'
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+gem 'uglifier'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -63,6 +64,7 @@ gem "geocoder"
 gem "gon"
 gem "dotenv-rails"
 gem 'rexml', '~> 3.2', '>= 3.2.4'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
