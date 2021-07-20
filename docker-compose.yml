@@ -8,10 +8,10 @@ services:
     # command: bundle exec puma -C config/puma.rb
     command: bundle exec rails server -e production
     volumes:
-    - .:/var/www/remote-work-space
-    - public-data:/var/www/remote-work-space/public
-    - tmp-data:/var/www/remote-work-space/tmp
-    - log-data:/var/www/remote-work-space/log
+      - .:/var/www/remote-work-space
+      - public-data:/var/www/remote-work-space/public
+      - tmp-data:/var/www/remote-work-space/tmp
+      - log-data:/var/www/remote-work-space/log
 #   depends_on:
 #     - db
 # db:
