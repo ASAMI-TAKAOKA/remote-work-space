@@ -37,3 +37,8 @@ yarn-debug.log*
 
 # 追記
 .env
+
+# 追記
+sekkei.drawio
+er.drawio
+erd.pdf

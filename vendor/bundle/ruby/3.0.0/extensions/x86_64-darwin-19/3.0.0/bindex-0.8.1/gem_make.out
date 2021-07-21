@@ -1,0 +1,15 @@
+current directory: /Users/asamitakaoka/project/remote-work-space/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/asamitakaoka/.rbenv/versions/3.0.0/bin/ruby -I /Users/asamitakaoka/.rbenv/versions/3.0.0/lib/ruby/3.0.0 -r ./siteconf20210722-15081-a3hhj1.rb extconf.rb
+creating Makefile
+
+current directory: /Users/asamitakaoka/project/remote-work-space/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/asamitakaoka/project/remote-work-space/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/asamitakaoka/project/remote-work-space/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20210722-15081-jvt4zf/skiptrace/internal
