@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "from@telespo.net"
+  default from: "noreply@telespo.net"
   layout 'mailer'
 end
