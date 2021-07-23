@@ -20,10 +20,10 @@ module RemoteWorkSpace
     # config.eager_load_paths << Rails.root.join("extras")
     # 認証トークンをremoteフォームに埋め込む
     config.action_view.embed_authenticity_token_in_remote_forms = true
-    config.action_mailer.default_url_options = { :host => 'https://telespo.net' }
+    config.action_mailer.default_url_options = { host: 'localhost' }
     # タイムゾーンを日本時間に設定
     config.time_zone = 'Tokyo'
-    config.hosts << 'telespo.net'
+    
     config.generators do |g|
       g.test_framework :rspec
     end
