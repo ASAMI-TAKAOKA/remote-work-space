@@ -64,8 +64,6 @@ gem "geocoder"
 gem "gon"
 gem "dotenv-rails"
 gem 'rexml', '~> 3.2', '>= 3.2.4'
-gem 'aws-sdk-rails', '~> 3'
-gem 'aws-sdk-s3', '~> 1'
 
 
 group :development, :test do
