@@ -27,7 +27,7 @@ Devise.setup do |config|
   config.mailer_sender = 'MyService <noreply@telespo.net>'
 
   # Configure the class responsible to send e-mails.
-  # config.mailer = 'Devise::Mailer'
+  config.mailer = 'Users::Mailer' # オーバーライド用のコントローラ指定
 
   # Configure the parent class responsible to send e-mails.
   # config.parent_mailer = 'ActionMailer::Base'
