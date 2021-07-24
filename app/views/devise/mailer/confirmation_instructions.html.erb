@@ -1,5 +1,12 @@
-<p>こんにちは！ <%= @email %>さん！</p>
-
-<p>以下のリンクからユーザの認証を行ってユーザ登録を完了してください。</p>
-
-<p><%= link_to 'ユーザ認証を実行', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p>こんにちは！ <%= @email %>さん</p>
+<br>
+<p>ユーザー登録登録が完了しました。</p>
+<br>
+<p>下記URLよりアクセスできます。</p>
+<p><%= link_to 'TELESPO', 'https://telespo.net' %></p>
+<br>
+<br>
+<br>
+<p>このメールは返信しても届きません。お問い合わせはアプリを起動して「お問い合わせ」からお願いいたします。</p>
+<br>
+<p>管理人より</p>
