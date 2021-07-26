@@ -65,7 +65,8 @@ gem "gon"
 gem "dotenv-rails"
 gem 'rexml', '~> 3.2', '>= 3.2.4'
 gem 'aws-sdk-rails'
-
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 
 group :development, :test do
   # テストフレームワーク
