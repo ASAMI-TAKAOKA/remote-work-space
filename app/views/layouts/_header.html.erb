@@ -10,9 +10,9 @@
               <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-info mr-3"  %></li>
               <li><%= link_to "投稿する", new_post_path, class: "btn btn-info mr-3" %></li>
             <% else %>
-              <li><%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: "btn-sm btn-success mr-3" %></li>
-              <li><%= link_to "ログイン", new_user_session_path, method: :post, class: "btn btn-info mr-3" %></li>
-              <li><%= link_to "新規登録", new_user_registration_path, method: :post, class: "btn btn-info mr-3" %></li>
+              <li><%= link_to "ゲストログイン(閲覧用)", users_guest_sign_in_path, method: :post, class:"btn-sm btn-success mr-3" %></li>
+              <li><%= link_to "ログイン", new_user_session_path, class: "post" %></li>
+              <li><%= link_to "新規登録", new_user_registration_path, class: "post" %></li>
             <% end %>
           </ul>
         </nav>
