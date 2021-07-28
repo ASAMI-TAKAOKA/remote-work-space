@@ -33,9 +33,9 @@ https://telespo.net/
 
 
 
-# AWS構成図
+# インフラ構成図
 <div align="center">
-<img width="1014" alt="AWS" src="">
+<img width="1014" alt="AWS" src="https://user-images.githubusercontent.com/77926245/127286015-7328ab00-db0d-4543-8829-634581511084.png">
 </div>
 
 # ER図
@@ -113,18 +113,18 @@ https://telespo.net/
 
 # デザイン一覧
 #### 投稿一覧画面
-<img width="1665" alt="投稿一覧" src="">
+<img width="1665" alt="投稿一覧" src="https://user-images.githubusercontent.com/77926245/127287248-d9166fa9-780a-4ac0-904d-14a0e49040cf.png">
 
 #### 地図画面（マーカーをクリックするとスポット名称が表示）
-<img width="1665" alt="スポット名称が表示" src="">
+<img width="1665" alt="スポット名称が表示" src="https://user-images.githubusercontent.com/77926245/127287260-a8b6503e-cd9d-465b-8e5c-139ee398e93e.png">
 
 #### 地図画面（スポット名称をクリックすると投稿詳細ページへ遷移）
-<img width="1665" alt="投稿詳細ページへ遷移" src="">
+<img width="1665" alt="投稿詳細ページへ遷移" src="https://user-images.githubusercontent.com/77926245/127287268-07570a03-27a6-443a-b71d-07e0724a9eed.png">
 
 # 今後の実装予定
 CircleCI導入
+ECS導入
 コメント削除機能
 Ajaxでの非同期通信（コメント機能、いいね機能、フォロー・フォロワー機能）
-TwitterAPIの導入
 Rspecテストの充実
 
