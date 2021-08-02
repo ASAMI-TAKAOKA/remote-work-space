@@ -121,6 +121,7 @@ https://telespo.net/
 <img width="1665" alt="投稿詳細ページへ遷移" src="https://user-images.githubusercontent.com/77926245/127287268-07570a03-27a6-443a-b71d-07e0724a9eed.png">
 
 # 今後の実装予定
+React導入
 Capistrano導入
 CircleCI導入
 ECS導入
