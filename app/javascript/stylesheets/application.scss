@@ -5,7 +5,7 @@
 body {
   font-family: "Arial Black" ;
   color: #FAFAFA;
-  background-color: darkred;
+  background-color: #ffcccc;
   height: 500px; /* 空の要素なので高さの定義が必要 */
   border-radius: 30px;
   width: 100%;
@@ -47,6 +47,7 @@ table thead th,
 table tbody th,
 table tbody td {
   padding: .6em 3em;
+  margin: 18px;
   
 }
 table thead th {
