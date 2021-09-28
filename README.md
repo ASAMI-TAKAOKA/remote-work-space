@@ -112,7 +112,8 @@ https://telespo.net/
 
 # デザイン一覧
 #### 投稿一覧画面
-<img width="1665" alt="投稿一覧" src="https://user-images.githubusercontent.com/77926245/127287248-d9166fa9-780a-4ac0-904d-14a0e49040cf.png">
+<img width="1665" alt="投稿一覧" src="https://user-images.githubusercontent.com/77926245/135109741-be39ea9e-253b-45da-a2e9-20e05e7b02c6.png">
+<img width="1665" alt="投稿一覧" src="https://user-images.githubusercontent.com/77926245/135109747-efb9d1c4-8a9b-44d0-a5d5-6376dbf4602c.png">
 
 #### 地図画面（マーカーをクリックするとスポット名称が表示）
 <img width="1665" alt="スポット名称が表示" src="https://user-images.githubusercontent.com/77926245/127287260-a8b6503e-cd9d-465b-8e5c-139ee398e93e.png">
