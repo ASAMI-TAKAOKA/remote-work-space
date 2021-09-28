@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+          <br>
+          <i class="fas fa-search fa-2x"></i>
+          <label for="autocomplete-input">
+            <%= form_with(url: search_posts_path, local: true, method: :get, class: "top_contents") do |form| %>
+            <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "post" %>
+            <%= form.submit "検索", class: "search-btn"%>
+          <% end %>
+          </label>
+        </div>
+      </div>
+    </div>
