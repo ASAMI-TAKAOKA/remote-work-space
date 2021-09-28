@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :move_to_index
 
   def follows
     user = User.find(params[:id])
@@ -30,6 +30,11 @@ class UsersController < ApplicationController
                                    :password_confirmation)
     end
 
+
+    def move_to_index
+      flash[:danger] = "※※※ 新規登録/ログインが必要です ※※※"
+      redirect_to request.referer unless user_signed_in?
+    end
     # beforeフィルター
 
     # 正しいユーザーかどうかを確認

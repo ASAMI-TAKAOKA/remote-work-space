@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
-  before_action :signed_in_user, only: [:create, :destroy]
   before_action :set_post, only: [:edit, :show]
-  before_action :move_to_index, except: [:index, :show, :search]
+  before_action :move_to_index, except: [:index, :search]
 
   def index
     @posts = Post.page(params[:page]).per(3).includes(:user).order("created_at DESC")
@@ -56,8 +55,7 @@ class PostsController < ApplicationController
   end
 
   def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
+      flash[:danger] = "※※※ 新規登録/ログインが必要です ※※※"
+      redirect_to action: :index unless user_signed_in?
   end
 end
