@@ -1,5 +1,5 @@
 # TELESPO
-<img width="1670" alt="トップビュー" src="https://user-images.githubusercontent.com/77926245/127302316-e49f683f-940e-43ee-a61e-8fc1efe48c5d.png">
+<img width="1670" alt="トップビュー" src="https://user-images.githubusercontent.com/77926245/135076190-59e7463d-ab8a-4d58-aac8-63f81896f79f.png">
  
 # 概要
 テレワークにおすすめの場所をシェアしたり、探したりできるサービスです。
