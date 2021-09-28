@@ -38,3 +38,6 @@ yarn-debug.log*
 # 追記
 .env
 
+# 追記
+/config/database.yml
+
