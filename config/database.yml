@@ -1,6 +1,5 @@
 default: &default
   adapter: mysql2
-  charset: utf8
   encoding: utf8
   pool: <%= ENV.fetch("RAILES_MAX_THREADS") { 5 } %>
   username: <%= ENV.fetch("MYSQL_USER") { 'root' } %>
@@ -14,4 +13,3 @@ development:
 test:
   <<: *default
   database: remote-work-space_test
-

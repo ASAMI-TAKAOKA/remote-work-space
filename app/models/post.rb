@@ -15,7 +15,7 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
   def self.search(search)
     if search != ""
-      Post.where('text LIKE(?)', "%#{search}%")
+      Post.where(['text LIKE ? OR body LIKE ? OR address LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%"])
     else
       Post.all
     end
