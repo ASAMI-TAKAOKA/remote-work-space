@@ -116,14 +116,17 @@ https://telespo.net/
 <img width="1665" alt="投稿一覧" src="https://user-images.githubusercontent.com/77926245/135109747-efb9d1c4-8a9b-44d0-a5d5-6376dbf4602c.png">
 
 #### 投稿詳細画面
-<img width="1665" alt="投稿一覧" src="https://user-images.githubusercontent.com/77926245/135110800-87385db4-4b6b-4cdf-bae4-8cd571d30d20.png">
+<img width="1665" alt="投稿一覧" src="">
 
 
 #### 地図画面（マーカーをクリックするとスポット名称が表示）
 <img width="1665" alt="スポット名称が表示" src="https://user-images.githubusercontent.com/77926245/127287260-a8b6503e-cd9d-465b-8e5c-139ee398e93e.png">
 
 #### 地図画面（スポット名称をクリックすると投稿詳細ページへ遷移）
-<img width="1665" alt="投稿詳細ページへ遷移" src="https://user-images.githubusercontent.com/77926245/127287268-07570a03-27a6-443a-b71d-07e0724a9eed.png">
+<img width="1665" alt="投稿詳細ページへ遷移" src="https://user-images.githubusercontent.com/77926245/135110800-87385db4-4b6b-4cdf-bae4-8cd571d30d20.png">
+
+#### ユーザー一覧画面
+<img width="1665" alt="投稿詳細ページへ遷移" src="https://user-images.githubusercontent.com/77926245/135111479-940f74b0-1fa7-41aa-8f51-0f4eaad0f946.png">
 
 # 今後の実装予定
 React導入
