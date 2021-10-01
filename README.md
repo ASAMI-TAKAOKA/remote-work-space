@@ -125,11 +125,11 @@ https://telespo.net/
 <img width="1665" alt="投稿詳細ページへ遷移" src="https://user-images.githubusercontent.com/77926245/135111479-940f74b0-1fa7-41aa-8f51-0f4eaad0f946.png">
 
 # 今後の実装予定
-React導入
+React導入(SPA化)
+→現在導入に向けReactの学習中
+
 Capistrano導入
 CircleCI導入
 ECS導入
-コメント削除機能
-Ajaxでの非同期通信（コメント機能、いいね機能、フォロー・フォロワー機能）
 Rspecテストの充実
 
