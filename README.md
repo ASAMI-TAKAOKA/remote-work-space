@@ -1,5 +1,5 @@
 # TELESPO
-<img width="1670" alt="トップビュー" src="https://user-images.githubusercontent.com/77926245/127302316-e49f683f-940e-43ee-a61e-8fc1efe48c5d.png">
+<img width="1670" alt="トップビュー" src="https://user-images.githubusercontent.com/77926245/135076190-59e7463d-ab8a-4d58-aac8-63f81896f79f.png">
  
 # 概要
 テレワークにおすすめの場所をシェアしたり、探したりできるサービスです。
@@ -112,20 +112,24 @@ https://telespo.net/
 
 # デザイン一覧
 #### 投稿一覧画面
-<img width="1665" alt="投稿一覧" src="https://user-images.githubusercontent.com/77926245/127287248-d9166fa9-780a-4ac0-904d-14a0e49040cf.png">
+<img width="1665" alt="投稿一覧" src="https://user-images.githubusercontent.com/77926245/135109741-be39ea9e-253b-45da-a2e9-20e05e7b02c6.png">
+<img width="1665" alt="投稿一覧" src="https://user-images.githubusercontent.com/77926245/135109747-efb9d1c4-8a9b-44d0-a5d5-6376dbf4602c.png">
 
 #### 地図画面（マーカーをクリックするとスポット名称が表示）
 <img width="1665" alt="スポット名称が表示" src="https://user-images.githubusercontent.com/77926245/127287260-a8b6503e-cd9d-465b-8e5c-139ee398e93e.png">
 
 #### 地図画面（スポット名称をクリックすると投稿詳細ページへ遷移）
-<img width="1665" alt="投稿詳細ページへ遷移" src="https://user-images.githubusercontent.com/77926245/127287268-07570a03-27a6-443a-b71d-07e0724a9eed.png">
+<img width="1665" alt="投稿詳細ページへ遷移" src="https://user-images.githubusercontent.com/77926245/135110800-87385db4-4b6b-4cdf-bae4-8cd571d30d20.png">
+
+#### ユーザー一覧画面
+<img width="1665" alt="投稿詳細ページへ遷移" src="https://user-images.githubusercontent.com/77926245/135111479-940f74b0-1fa7-41aa-8f51-0f4eaad0f946.png">
 
 # 今後の実装予定
-React導入
+React導入(SPA化)
+→現在導入に向けReactの学習中
+
 Capistrano導入
 CircleCI導入
 ECS導入
-コメント削除機能
-Ajaxでの非同期通信（コメント機能、いいね機能、フォロー・フォロワー機能）
 Rspecテストの充実
 
