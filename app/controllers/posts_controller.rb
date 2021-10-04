@@ -55,7 +55,6 @@ class PostsController < ApplicationController
   end
 
   def move_to_index
-      flash[:danger] = "※※※ 新規登録/ログインが必要です ※※※"
       redirect_to action: :index unless user_signed_in?
   end
 end

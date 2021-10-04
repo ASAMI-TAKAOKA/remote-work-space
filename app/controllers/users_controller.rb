@@ -32,10 +32,8 @@ class UsersController < ApplicationController
 
 
     def move_to_index
-      flash[:danger] = "※※※ 新規登録/ログインが必要です ※※※"
       redirect_to request.referer unless user_signed_in?
     end
-    # beforeフィルター
 
     # 正しいユーザーかどうかを確認
     def correct_user
